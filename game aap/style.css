@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+
+html{
+    overflow: hidden;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(./assets/gradient-bg.jpg); */
+    background: rgb(0,90,213);
+    background: linear-gradient(90deg, rgba(0,90,213,1) 17%, rgba(182,69,210,1) 51%, rgba(226,0,255,1) 81%);
+
+    background-size: cover;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.gameinfo{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+ 
+    position: relative;
+    margin: 0 auto;
+    padding-inline: 64px;
+    padding-top: 20px;
+    padding-bottom:20px ;
+    /* margin-top: 4vh; */   
+    display: inline;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    transform: translateY(-10vh);
+  
+    
+
+}
+
+.gamecontainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.15);
+   padding: 2rem 2rem;
+    width: 28vw;
+    border-radius: 12px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+
+
+}
+
+.box{
+    color: white;
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    font-weight:700;
+    
+
+    
+    
+}
+
+.box1,.box2,.box4,.box5{
+    border-right: 1px solid white;
+    border-bottom:  1px solid white;
+}
+.box3,.box6{
+    border-bottom:  1px solid white;
+}
+.box7,.box8{
+    border-right: 1px solid white;
+}
+
+.gamefooter{
+    display: none;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    transform: translateY(8vh);
+    color: white;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+
+.gamefooter.active{
+    display: flex;
+}
+
+.win{
+    background-color: green;
+}
+
+@media (min-width:150px) and (max-width: 450px) {
+    
+    /* html{
+        font-size:9px ;
+
+    } */
+    .box{
+        font-size: 1rem;
+    }
+    .gamecontainer{
+        width: 54vw;
+    border-radius: 12px;
+    }
+}
+
+@media (min-width:0px) and (max-width: 100px) {
+    
+    html{
+        font-size:5px ;
+
+    }
+    .box{
+        font-size: 1px;
+    }
+    .gamecontainer{
+        width: 54vw;
+    border-radius: 12px;
+    }
+}
+
+@media (min-width:500px) and (max-width: 1200px) {
+    .wrapper{
+        justify-content: normal;
+        display: flex;
+       padding-top: 15vh;
+    }
+}
